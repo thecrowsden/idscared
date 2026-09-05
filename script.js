@@ -1,6 +1,6 @@
 /*
 by The Crow's Den
-v1.0
+v1.1
 */
 
 let scale = {
@@ -157,14 +157,14 @@ const id_coords = {
 		icon: {
 			x: 0,
 			y: 0,
-			width: 0,
-			height: 0,
+			width: 1,
+			height: 1,
 		},
 		sign: {
 			x: 0,
 			y: 0,
-			width: 0,
-			height: 0,
+			width: 1,
+			height: 1,
 		},
 		sign_name: {
 			x: 0,
@@ -327,25 +327,27 @@ function dev_unlock() {
 }
 
 function check_file() {
-	const filename = input.file.id.files[0].name;
-	if (filename.toLowerCase() == "dev") {
-		dev_unlock()
-	} else {
-		let valid_id = false;
-		for (const i of id_types) {
-			for (const l of languages) {
-				if (filename.includes(id_name[i][l])) {
-					idmaker_setup(i, l);
-					valid_id = true;
+	if (input.file.id.files[0]) {
+		const filename = input.file.id.files[0].name.toLowerCase();
+		if (filename == "dev") {
+			dev_unlock()
+		} else {
+			let valid_id = false;
+			for (const i of id_types) {
+				for (const l of languages) {
+					if (filename == id_name[i][l].toLowerCase() + ".png") {
+						idmaker_setup(i, l);
+						valid_id = true;
+						break;
+					}
+				}
+				if (valid_id) {
 					break;
 				}
 			}
-			if (valid_id) {
-				break;
+			if (!valid_id) {
+				div.wrongfile.classList.remove("hidden");
 			}
-		}
-		if (!valid_id) {
-			div.wrongfile.classList.remove("hidden");
 		}
 	}
 }
