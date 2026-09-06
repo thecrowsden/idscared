@@ -13,7 +13,7 @@ a:active {color: #00bfbf; text-decoration: underline;}
 
 img, canvas {image-rendering: pixelated; vertical-align:bottom}
 
-.border_base {border-style: solid; margin: 0.2em;}
+.border_base {border-style: solid; margin: 0.2rem;}
 
 .canvas_draw {touch-action: none; cursor: crosshair;}
 
@@ -21,15 +21,17 @@ img, canvas {image-rendering: pixelated; vertical-align:bottom}
 
 .bottomless, h1, h2 {margin-bottom: 0;}
 
-.div_padding {margin-bottom: 2em;}
+.no_select, button, label {user-select: none;}
 
-.spacer {width: 2em;}
+.div_padding {margin-bottom: 2rem;}
+
+.spacer {width: 2rem;}
 
 label, input, button {vertical-align: middle;}
 
 .text_error {color: crimson;}
 
-input[type=file] {min-width: 20em; background-color: #303030; padding: 1.5em; border: 0.2em dashed #808080; border-radius: 2em; text-align: center;}
+input[type=file] {min-width: 20rem; background-color: #303030; padding: 1.5rem; border: 0.2rem dashed #808080; border-radius: 2rem; text-align: center; cursor: pointer;}
 
 input[type=file]:hover {background-color: #404040; border-color: #909090;}
 
@@ -37,19 +39,23 @@ input[type=file]:active {background-color: #202020; border-color: #707070;}
 
 input[type=file]::file-selector-button {display: none;}
 
-input[type=checkbox] {width: 2em; height: 2em;}
+input[type=range] {cursor: pointer;}
 
-input[type=text] {font-size: 1em; text-transform: uppercase; width: 10em; margin: 0.25em; margin-right: 2em;}
+input[type=checkbox] {width: 2rem; height: 2rem; cursor: pointer;}
 
-.label_text {display: inline-block; width: 4em; text-align: right;}
+input[type=text] {font-size: 1rem; text-transform: uppercase; width: 10rem; margin: 0.25rem; margin-right: 2rem;}
 
-button {font-size: 1em; margin: 0.5em;}
+.label_text {display: inline-block; width: 4rem; text-align: right;}
 
-.button_dev {width: 12em; margin: 0.25em 0;}
+.button_zone {font-size: 0;}
 
-.button_reset {margin: 0.1em;}
+button {font-size: 1rem; margin: 0.5rem; cursor: pointer;}
 
-.button_color {width: 2em; height: 2em; border: 0.15em solid #808080; border-radius: 0.5em; margin: 0.1em;}
+.button_dev {width: 12rem; margin: 0.25rem;}
+
+.button_reset {margin: 0.1rem;}
+
+.button_color {width: 2rem; height: 2rem; border: 0.15rem solid #808080; border-radius: 0.5rem; margin: 0.1rem;}
 
 .button_black {background-color: #16171a;}
 
@@ -67,11 +73,11 @@ button {font-size: 1em; margin: 0.5em;}
 
 .button_magenta {background-color: magenta;}
 
-.button_download {font-size: 2em; margin: 1em 0 1em;}
+.button_download {font-size: 2.5rem; margin: 3rem 0 1rem;}
 
-.reference_box button {font-size: 1.1em; padding: 0.15em 0.75em; margin-top: 0;}
+.reference_box button {font-size: 1.1rem; padding: 0.15rem 0.75rem; margin-top: 0;}
 
-.reference_box p {padding: 0 1em; margin: 0.5em auto;}
+.reference_box p {padding: 0 1rem; margin: 0.5rem auto;}
 
 a.imscared_link {color: #ff0000;}
 
@@ -93,9 +99,9 @@ a.roas_link:active {color: #007fbf;}
 
 table {margin: auto;}
 
-td {font-weight: bold; width: 10em; padding: 1em;}
+td {font-weight: bold; width: 10rem; padding: 1rem;}
 
-table, td {border: 0.2em solid white; border-collapse: collapse;}
+table, td {border: 0.2rem solid white; border-collapse: collapse;}
 
 @media (max-width: 950px) {
 	.reference_font_large {width: 704px;}

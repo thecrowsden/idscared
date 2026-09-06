@@ -364,7 +364,7 @@ function idmaker_setup(type, lang) {
 	c.sign.drawImage(img[type].sign.template, 0, 0);
 	update_scale();
 	
-	canvas.preview.style.borderColor = id_colormap[user_id_type].fg;
+	canvas.preview.style.borderColor = id_colormap[user_id_type].bg;
 	canvas.icon.style.borderColor = "white";
 	canvas.sign.style.borderColor = id_colormap[user_id_type].fg;
 	input.btn.sign.fg.classList.remove("button_" + id_colormap[type].bg);

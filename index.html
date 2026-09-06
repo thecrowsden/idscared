@@ -55,19 +55,22 @@ v1.1
 				</div>
 				<div id="div_devloader" class="hidden">
 					<p>DEV MENU UNLOCKED<br>Please select your ID:</p>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.en)">VIP badge</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.it)">Badge VIP</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.ptbr)">Crachá VIP</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.ru)">VIP-пропуск</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.fr)">Badge VIP</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.de)">VIP-Ausweis</button>
-					<br>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.en)">Worker card</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.it)">Card lavoratore</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.ptbr)">Cartão de trabalhador</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.ru)">Карта рабочего</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.fr)">Carte de Travail</button>
-					<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.de)">Arbeiterkarte</button>
+					<div class="button_zone">
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.en)">VIP badge</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.it)">Badge VIP</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.ptbr)">Crachá VIP</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.ru)">VIP-пропуск</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.fr)">Badge VIP</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.vip, language.de)">VIP-Ausweis</button>
+					</div>
+					<div class="button_zone">
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.en)">Worker card</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.it)">Card lavoratore</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.ptbr)">Cartão de trabalhador</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.ru)">Карта рабочего</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.fr)">Carte de Travail</button>
+						<button type="button" class="button_dev" onclick="idmaker_setup(id_type.worker, language.de)">Arbeiterkarte</button>
+					</div>
 				</div>
 				<button type="button" onclick="show_references()">Additional Info</button>
 			</div>
@@ -75,7 +78,7 @@ v1.1
 				<div id="div_preview">
 					<canvas id="canvas_id" width="128" height="128"></canvas>
 					<br>
-					<h2>PREVIEW:</h2>
+					<h2 class="no_select">PREVIEW:</h2>
 					<label>Zoom:</label><input id="input_zoom_preview" type="range" min="1" max="12" value="4" autocomplete="off" oninput="update_scale()">
 					<br>
 					<canvas id="canvas_preview" class="border_base" width="128" height="128"></canvas>
@@ -85,7 +88,7 @@ v1.1
 					</div>
 				</div>
 				<div id="div_icon">
-					<h2>ICON:</h2>
+					<h2 class="no_select">ICON:</h2>
 					<label>Zoom:</label><input id="input_zoom_icon" type="range" min="1" max="36" value="12" autocomplete="off" oninput="update_scale()">
 					<br>
 					<canvas id="canvas_icon" class="canvas_draw border_base" width="41" height="37"></canvas>
@@ -95,7 +98,7 @@ v1.1
 					<label>Pen Size:</label><input id="input_size_icon" type="range" min="1" max="4" value="1" autocomplete="off" oninput="update_pen_size()">
 				</div>
 				<div id="div_sign">
-					<h2>NAME:</h2>
+					<h2 class="no_select">NAME:</h2>
 					<label>Zoom:</label><input id="input_zoom_sign" type="range" min="1" max="18" value="6" autocomplete="off" oninput="update_scale()">
 					<br>
 					<canvas id="canvas_sign" class="border_base"></canvas>
