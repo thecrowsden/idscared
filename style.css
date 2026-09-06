@@ -41,7 +41,7 @@ input[type=file]::file-selector-button {display: none;}
 
 input[type=range] {cursor: pointer;}
 
-input[type=checkbox] {width: 2rem; height: 2rem; cursor: pointer;}
+input[type=checkbox] {width: 1.5rem; height: 1.5rem; cursor: pointer;}
 
 input[type=text] {font-size: 1rem; text-transform: uppercase; width: 10rem; margin: 0.25rem; margin-right: 2rem;}
 

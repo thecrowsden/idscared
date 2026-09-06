@@ -48,7 +48,7 @@ v1.1
 		<div id="div_loadprotect" class="hidden">
 			<div id="div_antipiracy">
 				<p>Please provide your VIP Badge or Worker Card.<br><sup>Any modifications to the image will not be used in the editor.</sup></p>
-				<input type="file" id="input_file_id" autocomplete="off" oninput="check_file()">
+				<input type="file" id="input_file_id" oninput="check_file()">
 				<br>
 				<div id="div_wrongfile" class="hidden">
 					<p class="text_error">The file provided is not a valid VIP Badge or Worker Card, or has been renamed.</p>
@@ -84,7 +84,7 @@ v1.1
 					<canvas id="canvas_preview" class="border_base" width="128" height="128"></canvas>
 					<br>
 					<div id="div_preview_pixelfix" class="hidden">
-						<label>Fix misplaced pixel:</label><input id="input_bool_pixelfix" type="checkbox" autocomplete="off" oninput="update_pixelfix()">
+						<label>Fix misplaced pixel:</label><input id="input_bool_pixelfix" type="checkbox" oninput="update_pixelfix()">
 					</div>
 				</div>
 				<div id="div_icon">
@@ -103,7 +103,7 @@ v1.1
 					<br>
 					<canvas id="canvas_sign" class="border_base"></canvas>
 					<br>
-					<label>Draw Signature:</label><input id="input_bool_sign_draw" type="checkbox" autocomplete="off" oninput="update_sign_draw_state()">
+					<label>Draw Signature:</label><input id="input_bool_sign_draw" type="checkbox" oninput="update_sign_draw_state()">
 					<div id="div_sign_text">
 						<label class="label_text">Name:</label><input id="input_text_name" type="text" placeholder="NAME" spellcheck="false" autocomplete="off" oninput="update_text()">
 						<div id="div_sign_text_info" class="hidden">

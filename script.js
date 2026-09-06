@@ -298,6 +298,31 @@ let sign_draw = false;
 let sign_bad_text = false;
 let sign_special_text = false;
 
+function try_clear_file_input() {
+	try {
+		input.file.id.value = null;
+	} catch(ex) {}
+}
+
+function restore_defaults() {
+	input.bool.sign_draw.checked = false;
+	update_sign_draw_state();
+	input.bool.pixelfix.checked = false;
+	pixelfix = false;
+	input.zoom.preview.value = 4;
+	input.zoom.icon.value = 12;
+	input.zoom.sign.value = 6;
+	input.size.icon.value = 1;
+	input.size.sign.value = 1;
+	input.txt.name.value = "";
+	input.txt.info.value = "";
+	sign_warning_set(false);
+	sign_bad_text = false;
+	sign_special_text = false;
+	div.sign_bad_text.classList.add("hidden");
+	div.sign_special_text.classList.add("hidden");
+}
+
 function update_scale() {
 	scale.preview = input.zoom.preview.value;
 	scale.icon = input.zoom.icon.value;
@@ -317,6 +342,7 @@ function show_references() {
 }
 
 function hide_references() {
+	try_clear_file_input()
 	div.antipiracy.classList.remove("hidden");
 	div.reference.classList.add("hidden");
 	div.wrongfile.classList.add("hidden");
@@ -355,7 +381,8 @@ function check_file() {
 function idmaker_setup(type, lang) {
 	user_id_type = type;
 	user_language = lang;
-
+	
+	restore_defaults();
 	c.id.drawImage(img[type].template, 0, 0);
 	c.preview.drawImage(canvas.id, 0, 0);
 	c.icon.drawImage(img.icon.template, 0, 0);
@@ -1249,6 +1276,7 @@ window.addEventListener("load", () => {
 			show_references();
 		}
 	}
+	try_clear_file_input()
 	div.unloaded.classList.add("hidden");
 	div.loadprotect.classList.remove("hidden");
 });
